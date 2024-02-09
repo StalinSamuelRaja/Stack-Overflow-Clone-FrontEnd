@@ -6,7 +6,7 @@ export default function Answer() {
     <div>
      
           <div >
-            <h1 className="card-title">{answer}</h1>
+            <h1 className="card-title">Answer</h1>
             <hr />
           </div>
         
