@@ -17,7 +17,7 @@ export default function Answer({ ans, questionId }) {
   return (
     <div>
       <h1 className="card-title">Answer</h1>
-      {ansStore && ansStore && ansStore.map((question) => (
+      {ansStore && ansStore && ansStore.map((answer) => (
           <div>
             <p>{answer.answer}</p>
 
