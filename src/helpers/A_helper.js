@@ -17,16 +17,16 @@ export async function deleteAnswer(id){
     return Answ;
 }
 
+
 export async function addAnswer(quesId,newAns){
     const res=await fetch(`${Answ_API}/add/`,{
         method:"POST",
-        body:JSON.stringify(quesId,newAns),
+        body:JSON.stringify({quesId,...newAns}),
         headers:{"Content-type":"application/json",},
     });
     const Answ=await res.json();
     return Answ;
 }
-
 
 
 export async function editAnswer(id,editAns){

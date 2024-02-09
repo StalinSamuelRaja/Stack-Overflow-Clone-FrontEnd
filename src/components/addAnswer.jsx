@@ -7,6 +7,7 @@ import { updateanswerinfo } from "../reducers/answerreducer";
 import { answerschema } from "../formik/addanswerformik";
 import { addAnswer } from "../helpers/A_helper";
 
+
 export default function AddAnswer({ questionId }) {
   const { answerinfo } = useSelector((state) => state.Answerdata.data);
   const dispatch = useDispatch();
@@ -26,12 +27,10 @@ export default function AddAnswer({ questionId }) {
           dispatch(updateanswerinfo(updatedAnswerinfo));
         } catch (error) {
           console.error("Error adding answer:", error);
-
         }
       },
       
-      
-      
+               
     });
 
   return (
