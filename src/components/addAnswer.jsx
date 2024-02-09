@@ -8,7 +8,7 @@ import { answerschema } from "../formik/addanswerformik";
 import { addAnswer } from "../helpers/A_helper";
 
 
-export default function AddAnswer({ questionId }) {
+export default function AddAnswer({ questionId ,setAns}) {
   const { answerinfo } = useSelector((state) => state.Answerdata.data);
   const dispatch = useDispatch();
 
@@ -21,7 +21,7 @@ export default function AddAnswer({ questionId }) {
       onSubmit:  (newanswer) => {
         console.log(newanswer)
         try {
-           addAnswer(questionId, newanswer); // Pass questionId along with newanswer
+           addAnswer(questionId, newanswer,setAns); // Pass questionId along with newanswer
           // Make sure answerinfo is initialized properly and is an array
           const updatedAnswerinfo = Array.isArray(answerinfo) ? [...answerinfo, newanswer] : [newanswer];
           dispatch(updateanswerinfo(updatedAnswerinfo));

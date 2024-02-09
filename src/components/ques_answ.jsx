@@ -9,6 +9,8 @@ export default function QuesAnsw() {
   const { questionId } = useParams(); // Get the questionId from route params
   const { answerId } = useParams();
   const { questioninfo } = useSelector((state) => state.Questiondata.data);
+  
+    const [ans,setAns]=useState(false)
 
   const [like, setLike] = useState(0);
   const [dislike, setDisLike] = useState(0);
@@ -71,11 +73,11 @@ export default function QuesAnsw() {
               </div>
               <hr />
               <div>
-                <Answer answerId={answerId}/>
+                <Answer answerId={answerId} ans={ans} questionId={questionId} />
               </div>
 
               <div>
-                <AddAnswer  questionId={questionId} />
+                <AddAnswer  questionId={questionId} setAns={setAns} />
               </div>
               
             </div>
