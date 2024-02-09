@@ -24,14 +24,18 @@ export async function addAnswer(quesId, newAns, setAns) {
 
     headers: { "Content-type": "application/json" },
   });
+ 
+  setAns((e)=>!e)
 }
 
 export async function showAnswer(quesId) {
-  const res = await fetch(`/showans/${quesId}`, {
+    console.log(quesId)
+  const res = await fetch(`${Answ_API}/showans/${quesId}`, {
     method: "GET",
     headers: { "Content-type": "application/json" },
   });
   const Answ = await res.json();
+  console.log(Answ)
   return Answ.answer
 }
 

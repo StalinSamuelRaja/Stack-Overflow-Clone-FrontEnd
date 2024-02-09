@@ -19,7 +19,7 @@ export default function AddAnswer({ questionId ,setAns}) {
       },
       validationSchema: answerschema,
       onSubmit:  (newanswer) => {
-        console.log(newanswer)
+        
         try {
            addAnswer(questionId, newanswer,setAns); // Pass questionId along with newanswer
           // Make sure answerinfo is initialized properly and is an array
@@ -47,7 +47,7 @@ export default function AddAnswer({ questionId ,setAns}) {
           onChange={handleChange}
           className="textarea textarea-bordered textarea-lg w-full  max-w-1xl"
         />
-        {console.log(values.answer)}
+        
         {touched.answer && errors.answer ? <div>{errors.answer}</div> : ""}
         <button
           type="submit"
