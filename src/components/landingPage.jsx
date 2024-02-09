@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import TopBar from "./topBar";
 
 export default function LandingPage() {
@@ -30,6 +31,7 @@ export default function LandingPage() {
                 <button className="btn bg-orange-600 text-secondary-content">
                   join the community
                 </button>
+                <Link className="link mt-2" to="/ques/all">search content</Link>
               </div>
             </div>
           </div>

@@ -12,33 +12,36 @@ import View_QA from './components/view_qa'
 import { data } from 'autoprefixer'
 import { getAllQuestion } from './helpers/Q_helper'
 import { Route, Routes } from 'react-router-dom'
+import AskQuestion from './components/askQuestion'
+import Questions from './components/question'
+import { useDispatch } from 'react-redux'
+import { getAllAnswer } from './helpers/A_helper'
+import { updatequestioninfo } from './reducers/questionreducer'
+import { updateanswerinfo } from './reducers/answerreducer'
 
 
 
 function App() {
-//   const [quesAnsw, setQuesAnsw] = useState()
+  const dispatch = useDispatch();
 
-// useEffect(()=>{
-//   getAllQuestion().then((Quest)=>{
-//     setQuesAnsw(Quest)
-// })
-// })
+  useEffect(() => {
+    getAllQuestion().then((data) => dispatch(updatequestioninfo(data)));
+    getAllAnswer().then((data)=>dispatch(updateanswerinfo(data)))
+  }, [dispatch]);
 
   return (
     <div className='w-full '>
-      <Routes>
       
+      <Routes>
         <Route exact path="/" element={<LandingPage/>}/>
         <Route path="/ques/all" element={<MainSpace/>}/>
-        
+        <Route path="/ask/ques" element={<AskQuestion/>}/>
+        <Route path="/view/ques/:questionId" element={<View_QA/>}/>
+        <Route path="/login" element={<LoginPage/>}/>
+        <Route path="/signup" element={<SignUpPage/>}/>
+        <Route path="/tags" element={<Tags/>}/>
       </Routes>
-      
-      
-      {/* <MainSpace/> */}
-      {/* <View_QA/> */}
-      {/* <SignUpPage/> */}
-      {/* <LoginPage/> */}
-      {/* <Tags/> */}
+     
     </div>
    
   )

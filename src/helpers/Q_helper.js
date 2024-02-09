@@ -1,5 +1,7 @@
 import {  Ques_API } from "./api";
 
+
+
 export async function getAllQuestion(){
     const res=await fetch(`${Ques_API}/all`,{
         method:"GET",
@@ -18,7 +20,7 @@ export async function deleteQuestion(id){
 }
 
 export async function addQuestion(newQue){
-    const res=await fetch(`${Ques_API}/add/${id}`,{
+    const res=await fetch(`${Ques_API}/add/`,{
         method:"POST",
         body:JSON.stringify(newQue),
         headers:{"Content-type":"application/json",},

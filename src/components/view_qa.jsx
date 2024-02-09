@@ -1,15 +1,26 @@
-import LeftSideBar from "./leftSideBar";
+// View_QA.jsx
 
+import { useState } from "react";
+import AddAnswer from "./addAnswer";
+import TopBar from "./topBar";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { updatequestioninfo } from "../reducers/questionreducer";
+import LeftSideBar from "./leftSideBar";
 import RightSidebar from "./rightSideBar/rightSideBar";
-import "../App.css";
 import QuesAnsw from "./ques_answ";
 
 export default function View_QA() {
+  const { questioninfo } = useSelector((state) => state.Questiondata.data);
+  const question = questioninfo && questioninfo.Quest[0];
   return (
-    <div className='flex flex-row w-full  border-solid '>
+    <div>
+      <TopBar />
+      <div className="flex flex-row w-full  border-solid ">
         <LeftSideBar />
-        <QuesAnsw  />
+        <QuesAnsw questionId={question && question._id} />
         <RightSidebar />
-     </div>
+      </div>
+    </div>
   );
 }

@@ -1,9 +1,11 @@
+import { Link } from "react-router-dom";
+
 export default function LeftSideBar() {
   return (
     <div className="flex basis-1/4">
       <ul className="menu bg-base-100 text-base rounded-box w-20 mx-5">
         <li>
-          <a>
+        <Link className="text" to="/ques/all">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
@@ -17,10 +19,10 @@ export default function LeftSideBar() {
               />
             </svg>
             Home
-          </a>
+          </Link>
         </li>
         <li>
-          <a>
+          <Link className="text" to="/tags">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
@@ -34,7 +36,7 @@ export default function LeftSideBar() {
               />
             </svg>
             Tags
-          </a>
+          </Link>
         </li>
         <li>
           <a>

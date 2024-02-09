@@ -4,8 +4,8 @@ export async function getAllAnswer(){
     const res=await fetch(`${Answ_API}/all`,{
         method:"GET",
     });
-    const Quest= await res.json();
-    return Quest
+    const Answ= await res.json();
+    return Answ
 } 
 
 export async function deleteAnswer(id){
@@ -13,26 +13,28 @@ export async function deleteAnswer(id){
         method:"DELETE",
         headers:{"Content-type":"application/json",},
     })
-    const Quest=await res.json();
-    return Quest;
+    const Answ=await res.json();
+    return Answ;
 }
 
-export async function addAnswer(newQue){
-    const res=await fetch(`${Answ_API}/add/${id}`,{
+export async function addAnswer(quesId,newAns){
+    const res=await fetch(`${Answ_API}/add/`,{
         method:"POST",
-        body:JSON.stringify(newQue),
+        body:JSON.stringify(quesId,newAns),
         headers:{"Content-type":"application/json",},
     });
-    const Quest=await res.json();
-    return Quest;
+    const Answ=await res.json();
+    return Answ;
 }
 
-export async function editAnswer(id,editQue){
+
+
+export async function editAnswer(id,editAns){
     const res=await fetch(`${Answ_API}/edit/${id}`,{
         method:"PUT",
-        body:JSON.stringify(editQue),
+        body:JSON.stringify(editAns),
         headers:{"Content-type":"application/json",},
     });
-    const Quest=await res.json();
-    return Quest;
+    const Answ=await res.json();
+    return Answ;
 }
