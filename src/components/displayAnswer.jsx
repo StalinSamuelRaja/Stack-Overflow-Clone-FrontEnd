@@ -29,7 +29,7 @@ export default function Answer({ ans, questionId }) {
       {ansStore && ansStore.map((answer) => (
           <div key={answer._id}>
             <p>{answer.answer}</p>
-        <button onClick={()=>handleDelete(answer._id)}>Delete</button>
+        <button className="btn btn-xs btn-error btn-outline m-2" onClick={()=>handleDelete(answer._id)}>Delete</button>
             <hr />
           </div>
         ))}

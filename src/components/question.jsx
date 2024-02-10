@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 export default function Questions() {
   const { questioninfo } = useSelector((state) => state.Questiondata.data);
 
+
+
   return (
 
     <div className="flex basis-1/2 border-0 border-2 border-black-500">
@@ -31,6 +33,7 @@ export default function Questions() {
                 </Link>
                 <p>{question.questionbody}</p>
                 <p className="opacity-50 pl-96">{question.tag}</p>
+
               </div>
             </div>
           </div>
