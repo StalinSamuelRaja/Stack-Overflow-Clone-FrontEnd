@@ -1,12 +1,13 @@
-// Questions.jsx
+// Questions.jsx           
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector } from "react-redux"; 
 import { Link } from "react-router-dom";
 
 export default function Questions() {
   const { questioninfo } = useSelector((state) => state.Questiondata.data);
 
   return (
+
     <div className="flex basis-1/2 border-0 border-2 border-black-500">
       <div>
         <div className="flex flex-row">
@@ -15,7 +16,7 @@ export default function Questions() {
             Ask Question
           </Link>
         </div>
-
+                  
         {questioninfo && questioninfo.Quest && questioninfo.Quest.map((question) => (
           <div key={question._id}>
             <div className="card flex-row w-full card-body border-0 p-3 m-2 rounded-0 size-fit mt-20 bg-warning-subtle opacity-100 text-neutral">
