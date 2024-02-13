@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
 import TopBar from "./topBar";
+import TextAnime from "./textAnime";
 
 export default function LandingPage() {
   return (
     <div >
       <TopBar />
-      
-      <div className="flex bg-black" id="bg_base">
+
+      <div className="flex" id="bg_base">
+        
         <div className="flex-row">
           <div className="card ml-72 m-48 w-96 bg-warning-subtle text-info-content">
             <div className="card-body">
@@ -32,7 +34,9 @@ export default function LandingPage() {
                 <button className="btn bg-orange-600 text-secondary-content">
                   join the community
                 </button>
-                <Link className="link mt-2" to="/ques/all">search content</Link>
+                <Link className="link mt-2" to="/ques/all">
+                  search content
+                </Link>
               </div>
             </div>
           </div>
@@ -64,10 +68,26 @@ export default function LandingPage() {
                   Discover Teams
                 </button>
               </div>
+              
             </div>
+            
           </div>
+          <div className="flex-col mt-10 mr-48">
+         <div className="">
+          <h1 className="text-5xl text-white  align-bottom">
+            
+
+
+            {<TextAnime />} </h1>
+          </div>
+         </div>
         </div>
+      
       </div>
+      
+     
+      
     </div>
+    
   );
 }

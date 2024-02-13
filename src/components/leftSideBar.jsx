@@ -83,7 +83,7 @@ export default function LeftSideBar() {
              />
            </figure>
              <div className="card-actions justify-end">
-               <button className="btn bg-orange-600 ">Create a Free team</button>
+               <button className="btn bg-orange-600 text-white">Create a Free team</button>
                <button className="btn badge-outline">why teams?</button>
              </div>
            </div>

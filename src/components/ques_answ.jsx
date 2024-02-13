@@ -44,9 +44,9 @@ export default function QuesAnsw() {
               <h2 className="card-title">{selectedQuestion.title}</h2>
               <p>{selectedQuestion.questionbody}</p>
 
-              <p>created by: {selectedQuestion.createdBy}</p>
+              <p><h1 className="font-semibold">Created by:</h1>{selectedQuestion.createdBy}</p>
               <p>
-                created at:{" "}
+              <h1 className="font-semibold">Created on:</h1>
                 {new Date(selectedQuestion.createdAt).toLocaleDateString()}
               </p>
 

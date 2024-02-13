@@ -25,7 +25,7 @@ export default function Questions() {
         </div>
        <div>
        {isLogedin ? (
-            <Link className="btn btn-success" to="/ask/ques">
+            <Link className="btn btn-success text-white" to="/ask/ques">
               Ask Question
             </Link>
           ) : (
