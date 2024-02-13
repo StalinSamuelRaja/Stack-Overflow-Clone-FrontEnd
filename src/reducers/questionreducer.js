@@ -4,7 +4,7 @@ const questionslice = createSlice({
   name: "Questiondata",
   initialState: {
     data: {
-      questioninfo: "",
+      questioninfo: [],
     },
   },
   reducers: {

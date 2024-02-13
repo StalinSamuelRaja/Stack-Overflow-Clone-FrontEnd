@@ -35,7 +35,8 @@ export async function showAnswer(quesId) {
     headers: { "Content-type": "application/json" },
   });
   const Answ = await res.json();
-  console.log(Answ)
+ 
+  // console.log(Answ)
   return Answ.answer
 }
 

@@ -1,9 +1,13 @@
 // QuesAnsw.jsx
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import AddAnswer from "./addAnswer";
 import { useParams } from "react-router-dom"; // Import useParams
 import Answer from "./displayAnswer";
+import { getAllQuestion } from "../helpers/Q_helper";
+import { getAllAnswer } from "../helpers/A_helper";
+import { updatequestioninfo } from "../reducers/questionreducer";
+import { updateanswerinfo } from "../reducers/answerreducer";
 
 export default function QuesAnsw() {
   const { questionId } = useParams(); // Get the questionId from route params
@@ -39,12 +43,37 @@ export default function QuesAnsw() {
             <div className="card-body flex  flex-col">
               <h2 className="card-title">{selectedQuestion.title}</h2>
               <p>{selectedQuestion.questionbody}</p>
+
+              <p>created by: {selectedQuestion.createdBy}</p>
+              <p>
+                created at:{" "}
+                {new Date(selectedQuestion.createdAt).toLocaleDateString()}
+              </p>
+
               <div className="card-actions justify-end">
                 <div className="flex flex-row mr-10">
                   <button className="btn btn-ghost border-0 btn-xs">
                     {selectedQuestion.tag}
                   </button>
-                  {/* <svg
+                </div>
+              </div>
+              <hr />
+
+              <div>
+                <Answer answerId={answerId} ans={ans} questionId={questionId} />
+              </div>
+
+              <div>
+                <AddAnswer questionId={questionId} setAns={setAns} />
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+      {/* <svg
                   onClick={handleLike}
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -83,20 +112,3 @@ export default function QuesAnsw() {
                   <path d="M15.73 5.5h1.035A7.465 7.465 0 0 1 18 9.625a7.465 7.465 0 0 1-1.235 4.125h-.148c-.806 0-1.534.446-2.031 1.08a9.04 9.04 0 0 1-2.861 2.4c-.723.384-1.35.956-1.653 1.715a4.499 4.499 0 0 0-.322 1.672v.633A.75.75 0 0 1 9 22a2.25 2.25 0 0 1-2.25-2.25c0-1.152.26-2.243.723-3.218.266-.558-.107-1.282-.725-1.282H3.622c-1.026 0-1.945-.694-2.054-1.715A12.137 12.137 0 0 1 1.5 12.25c0-2.848.992-5.464 2.649-7.521C4.537 4.247 5.136 4 5.754 4H9.77a4.5 4.5 0 0 1 1.423.23l3.114 1.04a4.5 4.5 0 0 0 1.423.23ZM21.669 14.023c.536-1.362.831-2.845.831-4.398 0-1.22-.182-2.398-.52-3.507-.26-.85-1.084-1.368-1.973-1.368H19.1c-.445 0-.72.498-.523.898.591 1.2.924 2.55.924 3.977a8.958 8.958 0 0 1-1.302 4.666c-.245.403.028.959.5.959h1.053c.832 0 1.612-.453 1.918-1.227Z" />
                 </svg> */}
                   {/* <div className="mr-5 mt-3"> {dislike}</div> */}
-                </div>
-              </div>
-              <hr />
-              <div>
-                <Answer answerId={answerId} ans={ans} questionId={questionId} />
-              </div>
-
-              <div>
-                <AddAnswer questionId={questionId} setAns={setAns} />
-              </div>
-            </div>
-          </div>
-        )}
-      </div>
-    </div>
-  );
-}

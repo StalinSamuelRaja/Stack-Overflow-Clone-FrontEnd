@@ -3,9 +3,10 @@ import TopBar from "./topBar";
 
 export default function LandingPage() {
   return (
-    <div>
+    <div >
       <TopBar />
-      <div className="flex">
+      
+      <div className="flex bg-black" id="bg_base">
         <div className="flex-row">
           <div className="card ml-72 m-48 w-96 bg-warning-subtle text-info-content">
             <div className="card-body">

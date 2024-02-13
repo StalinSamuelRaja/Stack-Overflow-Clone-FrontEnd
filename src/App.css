@@ -1,0 +1,7 @@
+#bg_base{
+    background-image: url(http://localhost:5173/bg.jpg) !important;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 100% 100%;
+  
+}

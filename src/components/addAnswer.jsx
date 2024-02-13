@@ -6,12 +6,13 @@ import { useFormik } from "formik";
 import { updateanswerinfo } from "../reducers/answerreducer";
 import { answerschema } from "../formik/addanswerformik";
 import { addAnswer } from "../helpers/A_helper";
+import { Link } from "react-router-dom";
 
 
 export default function AddAnswer({ questionId ,setAns}) {
   const { answerinfo } = useSelector((state) => state.Answerdata.data);
   const dispatch = useDispatch();
-
+  const isLogedin=localStorage.getItem("sessiontoken")
   const { values, handleChange, handleSubmit, errors, handleBlur, touched } =
     useFormik({
       initialValues: {
@@ -19,7 +20,7 @@ export default function AddAnswer({ questionId ,setAns}) {
       },
       validationSchema: answerschema,
       onSubmit:  (newanswer) => {
-        
+        newanswer={...newanswer,createdBy:localStorage.getItem("sessionemail"),createdAt:new Date()}
         try {
            addAnswer(questionId, newanswer,setAns); // Pass questionId along with newanswer
           // Make sure answerinfo is initialized properly and is an array
@@ -49,12 +50,22 @@ export default function AddAnswer({ questionId ,setAns}) {
         />
         
         {touched.answer && errors.answer ? <div>{errors.answer}</div> : ""}
-        <button
-          type="submit"
-          className="btn btn-outline w-25 px-1 ml-72 mt-4 btn-success"
-        >
-          Post Your Answer
-        </button>
+      
+        {isLogedin ? (
+            <button
+            type="submit"
+            className="btn btn-outline w-25 px-1 ml-72 mt-4 btn-success"
+          >
+            Post Your Answer
+          </button>
+          ) : (
+            <Link className="btn text-xs btn-outline btn-error" to="/login">
+              Login to ask Question
+            </Link>
+          )}
+
+        
+
       </form>
     </div>
   );

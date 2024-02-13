@@ -5,7 +5,7 @@ export default function LeftSideBar() {
     <div className="flex basis-1/4">
       <ul className="menu bg-base-100 text-base rounded-box w-20 mx-5">
         <li>
-        <Link className="text" to="/ques/all">
+          <Link className="text" to="/ques/all">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
@@ -68,6 +68,26 @@ export default function LeftSideBar() {
             Questions
           </a>
         </li>
+        <div className="card w-60 bg-base-100 shadow-xl">
+           
+           <div className="card-body">
+             <h2 className="card-title">
+             Stack Overflow for Teams – 
+               <div className="badge bg-orange-600 text-base-100">NEW</div>
+             </h2>
+             <p>Start collaborating and sharing organizational knowledge.</p>
+             <figure>
+             <img
+               src="https://cdn.sstatic.net/Img/teams/teams-illo-free-sidebar-promo.svg?v=47faa659a05e"
+               alt="Shoes"
+             />
+           </figure>
+             <div className="card-actions justify-end">
+               <button className="btn bg-orange-600 ">Create a Free team</button>
+               <button className="btn badge-outline">why teams?</button>
+             </div>
+           </div>
+         </div>
       </ul>
     </div>
   );

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import TopBar from "./topBar";
 import { addQuestion } from "../helpers/Q_helper";
 import { Link, useNavigate } from "react-router-dom";
@@ -13,6 +13,8 @@ export default function AskQuestion() {
   const { questioninfo } = useSelector((state) => state.Questiondata.data);
   const dispatch = useDispatch();
 
+useEffect
+
   const { values, handleChange, handleSubmit, errors, handleBlur, touched } =
     useFormik({
       initialValues: {
@@ -21,14 +23,16 @@ export default function AskQuestion() {
         tag: "",
       },
       validationSchema: questionschema,
-      onSubmit: (newquestion) => {
-        addQuestion(newquestion),
-          dispatch(updatequestioninfo([...questioninfo, newquestion]));
-          navigate="/ques/all"
-      
+      onSubmit: async (newquestion) => {
+        newquestion={...newquestion,createdBy:localStorage.getItem("sessionemail"),createdAt:new Date()}
+        const ques=await addQuestion(newquestion);
+        console.log(ques);
+        console.log(questioninfo);
+        dispatch(updatequestioninfo([...questioninfo.Quest, {...newquestion,_id:ques.Quest.insertedId}]));
+        navigate("/ques/all");
       },
     });
-
+    
   return (
     <div>
       <TopBar />
@@ -92,15 +96,13 @@ export default function AskQuestion() {
                     className="input input-bordered input-sm w-full max-w-1xl"
                   />
                   {touched.tag && errors.tag ? <div> {errors.tag} </div> : ""}
-                 
-                    <button
-                      type="submit"
-                      className="btn btn-outline w-25 px-1 ml-96 mt-4 btn-success"
-                     
-                    >
-                      Post Your Question
-                    </button>
                   
+                  <button
+                    type="submit"
+                    className="btn btn-outline w-25 px-1 ml-96 mt-4 btn-success"
+                  >
+                    Post Your Question
+                  </button>
                 </div>
               </div>
             </div>
