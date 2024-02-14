@@ -1,5 +1,5 @@
-import Widget from "./widget";
-import WidgetTags from "./widgetTags";
+import Widget from "./Widget";
+import WidgetTags from "./WidgetTags";
 import "../rightSideBar/RightSidebar.css"
 
 export default function RightSidebar(){
