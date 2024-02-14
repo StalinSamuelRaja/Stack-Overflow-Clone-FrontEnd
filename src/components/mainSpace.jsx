@@ -1,6 +1,6 @@
 import LeftSideBar from "./leftSideBar";
 import Questions from "./question";
-import RightSidebar from "./rightSideBar/rightSideBar";
+import RightSidebar from "./rightSideBar/RightSidebar.jsx";
 import "../App.css";
 import TopBar from "./topBar";
 
