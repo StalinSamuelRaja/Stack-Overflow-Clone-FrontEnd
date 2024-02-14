@@ -1,4 +1,4 @@
-import { Answ_API } from "./api";
+import { Answ_API } from "./API.js";
 
 export async function getAllAnswer() {
   const res = await fetch(`${Answ_API}/all`, {

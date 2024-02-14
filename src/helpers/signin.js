@@ -1,4 +1,4 @@
-import { User_API } from "./api";
+import { User_API } from "./API.js";
 
 
 export async function RegisternewUser(newuser) {
