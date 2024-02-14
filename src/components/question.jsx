@@ -19,7 +19,7 @@ export default function Questions() {
   return (
     <div className="flex basis-1/2 border-0 border-2 border-black-500">
       <div>
-        <div className="flex flex-row mr-5">
+        <div className="flex flex-row  mr-5">
           <div className="flex">
           <h1 className="text-2xl pr-96 mr-24 font-medium">All Questions</h1> 
         </div>

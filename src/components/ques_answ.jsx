@@ -44,15 +44,15 @@ export default function QuesAnsw() {
               <h2 className="card-title">{selectedQuestion.title}</h2>
               <p>{selectedQuestion.questionbody}</p>
 
-              <p><h1 className="font-semibold">Created by:</h1>{selectedQuestion.createdBy}</p>
+              <p><h1 className="font-semibold">Asked by:</h1>{selectedQuestion.createdBy}</p>
               <p>
-              <h1 className="font-semibold">Created on:</h1>
+              <h1 className="font-semibold">Asked on:</h1>
                 {new Date(selectedQuestion.createdAt).toLocaleDateString()}
               </p>
 
               <div className="card-actions justify-end">
                 <div className="flex flex-row mr-10">
-                  <button className="btn btn-ghost border-0 btn-xs">
+                  <button className="btn btn-outline btn-primary border-1 btn-xs">
                     {selectedQuestion.tag}
                   </button>
                 </div>

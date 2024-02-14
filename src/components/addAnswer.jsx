@@ -46,7 +46,7 @@ export default function AddAnswer({ questionId ,setAns}) {
           value={values.answer}
           onBlur={handleBlur}
           onChange={handleChange}
-          className="textarea textarea-bordered textarea-lg w-full  max-w-1xl"
+          className="textarea textarea-bordered textarea-lg w-full mb-4 max-w-1xl"
         />
         
         {touched.answer && errors.answer ? <div>{errors.answer}</div> : ""}
@@ -54,13 +54,13 @@ export default function AddAnswer({ questionId ,setAns}) {
         {isLogedin ? (
             <button
             type="submit"
-            className="btn btn-outline w-25 px-1 ml-72 mt-4 btn-success"
+            className="btn btn-outline w-25 px-1  ml-72 mt-4 btn-success"
           >
             Post Your Answer
           </button>
           ) : (
             <Link className="btn text-xs btn-outline btn-error" to="/login">
-              Login to ask Question
+              Login to Answer
             </Link>
           )}
 
