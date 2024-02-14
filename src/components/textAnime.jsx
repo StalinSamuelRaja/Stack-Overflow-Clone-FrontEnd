@@ -15,7 +15,7 @@ export default function TextAnime() {
   }, []);
 
   return (
-    <h1 className="font-extrabold mt-10 text-orange-600 text-5xl text-center">
+    <h1 className="font-extrabold mt-0 text-orange-600 text-5xl text-center">
       <TextTransition springConfig={presets.gentle}>{TEXTS[index % TEXTS.length]}</TextTransition>
     </h1>
   );

@@ -72,9 +72,9 @@ export default function LandingPage() {
             </div>
             
           </div>
-          <div className="flex-col mt-10 mr-48">
+          <div className="flex-col mt-3">
          <div className="">
-          <h1 className="text-5xl text-white  align-bottom">
+          <h1 className="text-5xl text-white align-bottom">
             
 
 
