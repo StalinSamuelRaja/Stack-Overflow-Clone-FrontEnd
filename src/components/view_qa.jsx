@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { updatequestioninfo } from "../reducers/questionreducer";
 import LeftSideBar from "./leftSideBar";
-import RightSidebar from "./rightSideBar/rightSideBar";
+import RightSidebar from "./rightSideBar/RightSidebar";
 import QuesAnsw from "./ques_answ";
 
 export default function View_QA() {
