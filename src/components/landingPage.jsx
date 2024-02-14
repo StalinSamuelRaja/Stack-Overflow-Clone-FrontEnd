@@ -78,7 +78,7 @@ export default function LandingPage() {
             
 
 
-            {<TextAnime />} </h1>
+           Every {<TextAnime />} has a tab open to stack overflow </h1>
           </div>
          </div>
         </div>
