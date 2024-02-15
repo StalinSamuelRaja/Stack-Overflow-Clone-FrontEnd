@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM  from "react";
+import  ReactDOM   from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
@@ -15,7 +15,7 @@ const store = configureStore({
   },
 });
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+ ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <Provider store={store}>
       <App />
