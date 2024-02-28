@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import LeftSideBar from "./LeftSideBar"; // Import LeftSideBar component
+import LeftSideBar from "./leftSideBar"; // Import LeftSideBar component
 
 export default function TopBar() {
   const navigate = useNavigate();
