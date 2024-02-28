@@ -1,8 +1,0 @@
-#bg_base {
-    background-image: url(/bg.jpg) !important;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    min-height: 100vh; /* Ensure the background covers the entire viewport */
-}

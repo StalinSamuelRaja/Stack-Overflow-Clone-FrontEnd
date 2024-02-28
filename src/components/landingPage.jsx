@@ -4,19 +4,18 @@ import TextAnime from "./textAnime";
 
 export default function LandingPage() {
   return (
-    <div >
+    <div className="bg-black min-h-screen">
       <TopBar />
 
-      <div className="flex" id="bg_base">
-        
-        <div className="flex-row">
-          <div className="card ml-72 m-48 w-96 bg-warning-subtle text-info-content">
-            <div className="card-body">
+      <div className="flex flex-col md:flex-row md:justify-center md:items-center md:space-x-8 mt-8">
+        <div className="m-8 md:mr-0 md:ml-12">
+          <div className="max-w-md bg-yellow-200 rounded-lg shadow-lg overflow-hidden">
+            <div className="p-6">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                class="w-9 h-9 ml-32"
+                className="w-12 h-12 text-orange-500 mx-auto mb-6"
               >
                 <path
                   fillRule="evenodd"
@@ -25,31 +24,31 @@ export default function LandingPage() {
                 />
               </svg>
 
-              <h2 className="card-title">
+              <h2 className="text-lg font-semibold text-gray-800 mb-4">
                 Find the best answer to your technical question, help others
                 answer theirs
               </h2>
 
-              <div className="card-actions justify-end">
-                <button className="btn bg-orange-600 text-secondary-content">
-                  join the community
+              <div className="flex justify-end">
+                <button className="bg-orange-600 text-white px-4 py-2 rounded-lg mr-2">
+                  Join the community
                 </button>
-                <Link className="link mt-2" to="/ques/all">
-                  search content
+                <Link className="text-gray-800 mt-2 underline" to="/ques/all">
+                  Search content
                 </Link>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="flex-row">
-          <div className="card ml-74 mt-48 w-96  bg-primary-content text-info-content">
-            <div className="card-body">
+        <div className="m-8 md:ml-0 md:mr-12">
+          <div className="max-w-md bg-blue-500 rounded-lg shadow-lg overflow-hidden">
+            <div className="p-6">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                class="w-9 h-9 ml-32"
+                className="w-12 h-12 text-blue-300 mx-auto mb-6"
               >
                 <path
                   fillRule="evenodd"
@@ -58,36 +57,26 @@ export default function LandingPage() {
                 />
               </svg>
 
-              <h2 className="card-title">
-                Want a secure, private space for your Coding skills and
+              <h2 className="text-lg font-semibold text-gray-800 mb-4">
+                Want a secure, private space for your coding skills and
                 technical knowledge?
               </h2>
 
-              <div className="card-actions justify-end">
-                <button className="btn btn-primary text-secondary-content">
+              <div className="flex justify-end">
+                <button className="bg-blue-600 text-white px-4 py-2 rounded-lg">
                   Discover Teams
                 </button>
               </div>
-              
             </div>
-            
           </div>
-          <div className="flex-col mt-3">
-         <div className="">
-          <h1 className="text-5xl text-white align-bottom">
-            
-
-
-           Every {<TextAnime />} has a tab open to stack overflow </h1>
-          </div>
-         </div>
         </div>
-      
       </div>
-      
-     
-      
+
+      <div className="mt-8 mx-4 md:mx-0 text-center md:text-left">
+      <h1 className="text-4xl md:text-6xl font-bold text-white">
+        Every <span className="md:inline-block"><TextAnime /></span> has a tab open to Stack Overflow
+      </h1>
     </div>
-    
+    </div>
   );
 }

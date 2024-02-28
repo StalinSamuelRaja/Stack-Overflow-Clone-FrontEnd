@@ -18,43 +18,16 @@ export default function WidgetTags() {
   ];
 
   return (
-    <div class="card bg-base-100 shadow-xl rounded-3  w-4/5 h-3/4  mt-0">
-      <div class="card-header opacity-100">Related Tags</div>
+    <div className="card bg-base-100 shadow-xl rounded-3 w-full md:w-4/5 h-auto md:h-3/4 mt-0">
+      <div className="card-header bg-warning-subtle opacity-100 font-semibold">Related Tags</div>
 
-      <div className="tags p-1">
-        <a role="button" className="btn btn-sm m-1">
-          C
-        </a> <a role="button" className="btn btn-sm m-1">
-          C++
-        </a> <a role="button" className="btn btn-sm m-1">
-          C#
-        </a> <a role="button" className="btn btn-sm m-1">
-          Java
-        </a> <a role="button" className="btn btn-sm m-1">
-          Python
-        </a> <a role="button" className="btn btn-sm m-1">
-          Javscript
-        </a> <a role="button" className="btn btn-sm m-1">
-          mern
-        </a> <a role="button" className="btn btn-sm m-1">
-          mongodb
-        </a> <a role="button" className="btn btn-sm m-1">
-          mysql
-        </a> <a role="button" className="btn btn-sm m-1">
-          atlas
-        </a> <a role="button" className="btn btn-sm m-1">
-          node.js
-        </a> <a role="button" className="btn btn-sm m-1">
-          react.js
-        </a> <a role="button" className="btn btn-sm m-1">
-          php
-        </a> <a role="button" className="btn btn-sm m-1">
-          netlify
-        </a> <a role="button" className="btn btn-sm m-1">
-          ruby
-        </a> 
+      <div className="tags p-3 flex flex-wrap">
+        {tags.map((tag, index) => (
+          <a key={index} role="button" className="btn btn-sm m-1 bg-warning-subtle">
+            {tag}
+          </a>
+        ))}
       </div>
-      
     </div>
   );
 }
