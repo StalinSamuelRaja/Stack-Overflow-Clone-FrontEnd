@@ -21,7 +21,7 @@ const Footergrid = () => {
           </a>
           <span className="text-lg font-bold">STACK OVERFLOW CLONE</span>
         </div>
-        <nav className="footer__nav md:col-span-3 ml-0 grid grid-cols-2 md:grid-cols-4 gap-10 ml-32">
+        <nav className="footer__nav md:col-span-3 ml-0 grid grid-cols-2 md:grid-cols-4 gap-10">
           <ul className="footer__nav-list">
             <li className="footer__nav-item">STACK OVERFLOW</li>
             <a href="/ques/all">
@@ -69,7 +69,7 @@ const Footergrid = () => {
             
           </ul>
         </nav>
-        <div className="footer__legal text-sm text-gray-400 ml-0 mt-4 md:col-span-full flex items-center ml-96 justify-center">
+        <div className="footer__legal text-sm text-gray-400 ml-0 mt-4 md:col-span-full flex items-center  justify-center">
           {/* Legal information */}
           <span>&copy; 2024 Stack Overflow Clone. All rights reserved.</span>
           <span className="ml-4">

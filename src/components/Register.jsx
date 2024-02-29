@@ -52,9 +52,9 @@ const RegisterUser = () => {
   });
 
   return (
-    <> <TopBar/>
+    <><TopBar/>
       <div className="flex flex-col sm:flex-row justify-center items-center sm:items-start m-2">
-       
+        
         <div className="sm:w-1/2">
           <img
             src="https://img.freepik.com/free-vector/sign-up-concept-illustration_114360-7965.jpg?w=740&t=st=1707715344~exp=1707715944~hmac=9b8187f45199760ff0f14aeeb52740a5ffd27ac5bd206104e0f9f52866bffa84"
