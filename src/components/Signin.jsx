@@ -7,44 +7,49 @@ import { SigninUser } from "../helpers/signin";
 
 const Signinuser = () => {
   const navigate = useNavigate();
-  const [data, setdata] = useState("");
-  const [success, setsuccess] = useState("");
+  const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
-  const { values, handleChange, handleSubmit, errors, handleBlur, touched } =
-    useFormik({
-      initialValues: {
-        email: "",
-        password: "",
-      },
-      validationSchema: SigninSchema,
-      onSubmit: async (user) => {
-        try {
-          // Set loading to true during form submission
-          setLoading(true);
-          const info = await SigninUser(user);
-          if (info?.error) {
-            setdata(info.error);
-            setsuccess("");
-          } else {
-            setsuccess(info.data);
-            setdata("");
-            // Save info to localStorage
-            localStorage.setItem("sessiontoken", info.token);
-            localStorage.setItem("sessionemail", user.email);
-            localStorage.setItem("Key", JSON.stringify(info.userId));
-            navigate("/");
-          }
-        } catch (error) {
-          console.error("Error during form submission:", error);
-        } finally {
-          setLoading(false); // Set loading back to false after form submission
-          setTimeout(() => {
-            setsuccess(""), setdata("");
-          }, 1000);
+  const togglePasswordVisibility = () => {
+    setShowPassword((prevShowPassword) => !prevShowPassword);
+  };
+
+  const {
+    values,
+    handleChange,
+    handleSubmit,
+    errors,
+    handleBlur,
+    touched,
+  } = useFormik({
+    initialValues: {
+      email: "",
+      password: "",
+    },
+    validationSchema: SigninSchema,
+    onSubmit: async (user) => {
+      try {
+        setLoading(true);
+        const info = await SigninUser(user);
+        if (info?.error) {
+          setError(info.error); // Set error message if provided by the server
+        } else {
+          // Clear error message if login is successful
+          setError("");
+          // Save info to localStorage
+          localStorage.setItem("sessiontoken", info.token);
+          localStorage.setItem("sessionemail", user.email);
+          localStorage.setItem("Key", JSON.stringify(info.userId));
+          navigate("/");
         }
-      },
-    });
+      } catch (error) {
+        console.error("Error during form submission:", error);
+      } finally {
+        setLoading(false);
+      }
+    },
+  });
 
   return (
     <>
@@ -59,17 +64,10 @@ const Signinuser = () => {
         <div className="flex flex-col justify-center items-center m-2">
           <h1 className="text-center sm:text-left m-4 text-3xl">Sign In</h1>
           <div className="w-full max-w-md">
-            {success !== "" && (
+            {error && (
               <div className="toast toast-top toast-end">
-                <div className="alert alert-success">
-                  <span>{success}</span>
-                </div>
-              </div>
-            )}
-            {data !== "" && (
-              <div className="toast toast-top toast-end">
-                <div className="alert alert-info">
-                  <span>{data}</span>
+                <div className="alert alert-error">
+                  <span>{error}</span>
                 </div>
               </div>
             )}
@@ -86,15 +84,23 @@ const Signinuser = () => {
               {touched.email && errors.email && (
                 <div className="text-error">{errors.email}</div>
               )}
-              <input
-                type="password"
-                placeholder="Enter password"
-                name="password"
-                value={values.password}
-                onBlur={handleBlur}
-                onChange={handleChange}
-                className="input input-bordered input-accent w-full p-2"
-              />
+              <div className="relative">
+                <input
+                  type={showPassword ? "text" : "password"}
+                  placeholder="Enter password"
+                  name="password"
+                  value={values.password}
+                  onBlur={handleBlur}
+                  onChange={handleChange}
+                  className="input input-bordered input-accent w-full p-2"
+                />
+                <span
+                  onClick={togglePasswordVisibility}
+                  className="absolute top-0 right-0 m-3 cursor-pointer"
+                >
+                  {showPassword ? "Hide" : "Show"} Password
+                </span>
+              </div>
               {touched.password && errors.password && (
                 <div className="text-error">{errors.password}</div>
               )}
@@ -120,11 +126,10 @@ const Signinuser = () => {
             </div>
           </div>
           <div className="card p-4 m-4 bg-green-100 mx-auto sm:w-2/5 rounded-md ">
-  <h4 className="text-lg font-semibold mb-2">Demo Login</h4>
-  <p>Email: stalin@gmail.com</p>
-  <p>Password: password</p>
-</div>
-
+            <h4 className="text-lg font-semibold mb-2">Demo Login</h4>
+            <p>Email: stalin@gmail.com</p>
+            <p>Password: password</p>
+          </div>
         </div>
       </div>
       <Footergrid />
