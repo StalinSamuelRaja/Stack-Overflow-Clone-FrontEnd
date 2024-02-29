@@ -7,6 +7,7 @@ import { updatequestioninfo } from "../reducers/questionreducer";
 import LeftSideBar from "./leftSideBar";
 import RightSidebar from "./rightSideBar/RightSidebar";
 import QuesAnsw from "./ques_answ";
+import Footergrid from "./footer";
 
 export default function View_QA() {
   const { questioninfo } = useSelector((state) => state.Questiondata.data);
@@ -41,6 +42,7 @@ export default function View_QA() {
           <RightSidebar />
         </div>
       </div>
+      <Footergrid/>
     </div>
   );
 }

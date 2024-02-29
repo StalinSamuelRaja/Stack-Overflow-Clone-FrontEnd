@@ -7,6 +7,8 @@ import { questionschema } from "../formik/addquestionformik";
 import { useFormik } from "formik";
 import { updatequestioninfo } from "../reducers/questionreducer";
 import { InformationCircleIcon, PencilAltIcon, TagIcon } from "@heroicons/react/solid";
+import { Footer } from "antd/es/layout/layout";
+import Footergrid from "./footer";
 
 
 export default function AskQuestion() {
@@ -120,6 +122,7 @@ export default function AskQuestion() {
           </div>
         </div>
       </div>
+      <Footergrid/>
     </div>
   );
 }

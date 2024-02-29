@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import TopBar from "./topBar";
 import TextAnime from "./textAnime";
 
+
 export default function LandingPage() {
   return (
     <div className="bg-black min-h-screen">
@@ -72,11 +73,12 @@ export default function LandingPage() {
         </div>
       </div>
 
-      <div className="mt-8 mx-4 md:mx-0 text-center md:text-left">
+      <div className="mt-8 mx-4 mb-44 md:mx-0 text-center md:text-left">
       <h1 className="text-4xl md:text-6xl font-bold text-white">
         Every <span className="md:inline-block"><TextAnime /></span> has a tab open to Stack Overflow
       </h1>
     </div>
+    
     </div>
   );
 }

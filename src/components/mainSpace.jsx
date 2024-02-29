@@ -3,6 +3,7 @@ import Questions from "./question";
 import RightSidebar from "./rightSideBar/RightSidebar.jsx";
 import "../App.css";
 import TopBar from "./topBar";
+import Footergrid from "./footer.jsx";
 
 export default function MainSpace() {
   return (
@@ -22,6 +23,7 @@ export default function MainSpace() {
           <RightSidebar />
         </div>
       </div>
+      <Footergrid/>
     </div>
   );
 }

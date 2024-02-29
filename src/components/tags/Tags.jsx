@@ -3,6 +3,7 @@ import React from "react";
 import TagsList from "./TagsList";
 import { tagsList } from "./tagList";
 import TopBar from "../topBar";
+import Footergrid from "../footer";
 
 const Tags = () => {
   return (
@@ -21,13 +22,14 @@ const Tags = () => {
             Using the right tags makes it easier for others to find and answer
             your question.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2">
             {tagsList.map((tag) => (
               <TagsList tag={tag} key={tag.id} />
             ))}
           </div>
         </div>
       </div>
+      <Footergrid/>
     </div>
   );
 };
