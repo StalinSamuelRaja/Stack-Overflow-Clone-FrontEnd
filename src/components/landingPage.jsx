@@ -40,8 +40,8 @@ export default function LandingPage() {
                 <button className="bg-orange-600  text-white px-4 py-2 rounded-lg mr-2 btn btn-disabled" >
                   Join the community
                 </button>
-                <button className="bg-orange-600  text-white px-4 py-2 rounded-lg mr-2"  onClick={handlePage}>
-                  Click here to Start
+                <button className="bg-orange-600 font-bold  text-white px-4 py-2 rounded-lg mr-2"  onClick={handlePage}>
+                  Start
                 </button>
               </div>
             </div>
