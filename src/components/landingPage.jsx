@@ -38,7 +38,7 @@ export default function LandingPage() {
 
               <div className="flex justify-end">
                 <button className="bg-orange-600  text-white px-2 py-1 rounded-lg mr-2 btn btn-disabled" >
-                  Join the Community
+                  Community
                 </button>
                 <button className="bg-orange-600 font-bold  text-white px-4 py-2 rounded-lg mr-2"  onClick={handlePage}>
                   Start
