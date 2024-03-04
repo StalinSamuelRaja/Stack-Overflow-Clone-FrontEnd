@@ -1,9 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import TopBar from "./topBar";
 import TextAnime from "./textAnime";
 
 
 export default function LandingPage() {
+  const navigate = useNavigate();
+  const handlePage = () => {
+    // Redirect to the main space
+    navigate("/ques/all");
+  };
+
   return (
     <div className="bg-black min-h-screen">
       <TopBar />
@@ -31,12 +37,12 @@ export default function LandingPage() {
               </h2>
 
               <div className="flex justify-end">
-                <button className="bg-orange-600 text-white px-4 py-2 rounded-lg mr-2">
+                <button className="bg-orange-600  text-white px-4 py-2 rounded-lg mr-2 btn btn-disabled" >
                   Join the community
                 </button>
-                <Link className="text-gray-800 mt-2 underline" to="/ques/all">
-                  Search content
-                </Link>
+                <button className="bg-orange-600  text-white px-4 py-2 rounded-lg mr-2"  onClick={handlePage}>
+                  Click here to Start
+                </button>
               </div>
             </div>
           </div>
@@ -64,7 +70,7 @@ export default function LandingPage() {
               </h2>
 
               <div className="flex justify-end">
-                <button className="bg-blue-600 text-white px-4 py-2 rounded-lg">
+                <button className="bg-blue-600 text-white px-4 py-2 rounded-lg btn btn-disabled">
                   Discover Teams
                 </button>
               </div>
