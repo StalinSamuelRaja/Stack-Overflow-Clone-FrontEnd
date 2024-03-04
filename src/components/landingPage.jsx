@@ -30,7 +30,7 @@ export default function LandingPage() {
                   clipRule="evenodd"
                 />
               </svg>
-
+                  
               <h2 className="text-lg font-semibold text-gray-800 mb-4">
                 Find the best answer to your technical question, help others
                 answer theirs
