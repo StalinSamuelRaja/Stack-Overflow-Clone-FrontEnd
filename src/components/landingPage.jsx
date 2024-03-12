@@ -1,6 +1,8 @@
 import { Link, useNavigate } from "react-router-dom";
 import TopBar from "./topBar";
 import TextAnime from "./textAnime";
+import { Footer } from "antd/es/layout/layout";
+import Footergrid from "./footer";
 
 export default function LandingPage() {
   const navigate = useNavigate();
@@ -12,7 +14,10 @@ export default function LandingPage() {
   return (
     <div className="bg-black min-h-screen">
       <TopBar />
-
+      <div className="mt-8 mb-0 mx-4 mb-44 md:mx-0 text-center md:text-left">
+      <h1 className="text-4xl md:text-3xl font-bold text-white">
+      Begin your Journey Click  <span className="md:inline-block text-orange-600">START</span>  to ask Question in our Stack Overflow clone.</h1>
+      </div>
       <div className="flex flex-col md:flex-row md:justify-center md:items-center md:space-x-8 mt-8">
         <div className="m-8 md:mr-0 md:ml-12">
           <div className="max-w-md bg-yellow-200 rounded-lg shadow-lg overflow-hidden">
@@ -31,7 +36,7 @@ export default function LandingPage() {
               </svg>
 
               <h2 className="text-lg font-semibold text-gray-800 mb-4">
-                Begin your Journey: Click 'START' to ask Question in our Stack Overflow clone.
+                 Find the best answer to your technical question, help others answer theirs
               </h2>
 
               <div className="flex justify-end">
@@ -88,7 +93,9 @@ export default function LandingPage() {
           </span>{" "}
           has a tab open to Stack Overflow
         </h1>
+        
       </div>
+      <Footergrid/>
     </div>
   );
 }
