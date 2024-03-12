@@ -2,7 +2,6 @@ import { Link, useNavigate } from "react-router-dom";
 import TopBar from "./topBar";
 import TextAnime from "./textAnime";
 
-
 export default function LandingPage() {
   const navigate = useNavigate();
   const handlePage = () => {
@@ -30,16 +29,20 @@ export default function LandingPage() {
                   clipRule="evenodd"
                 />
               </svg>
-                  
+
               <h2 className="text-lg font-semibold text-gray-800 mb-4">
-                To get started click the START button
+                Find the best answer to your technical question, help others
+                answer theirs To get started click the START button
               </h2>
 
               <div className="flex justify-end">
-                <button className="bg-orange-600  text-white px-2 py-1 rounded-lg mr-2 btn btn-disabled" >
+                <button className="bg-orange-600  text-white px-2 py-1 rounded-lg mr-2 btn btn-disabled">
                   Community
                 </button>
-                <button className="bg-orange-600 font-bold  text-white px-4 py-2 rounded-lg mr-2"  onClick={handlePage}>
+                <button
+                  className="bg-orange-600 font-bold  text-white px-4 py-2 rounded-lg mr-2"
+                  onClick={handlePage}
+                >
                   START
                 </button>
               </div>
@@ -79,11 +82,14 @@ export default function LandingPage() {
       </div>
 
       <div className="mt-8 mx-4 mb-44 md:mx-0 text-center md:text-left">
-      <h1 className="text-4xl md:text-6xl font-bold text-white">
-        Every <span className="md:inline-block"><TextAnime /></span> has a tab open to Stack Overflow
-      </h1>
-    </div>
-    
+        <h1 className="text-4xl md:text-6xl font-bold text-white">
+          Every{" "}
+          <span className="md:inline-block">
+            <TextAnime />
+          </span>{" "}
+          has a tab open to Stack Overflow
+        </h1>
+      </div>
     </div>
   );
 }
