@@ -31,8 +31,9 @@ export default function LandingPage() {
               </svg>
 
               <h2 className="text-lg font-semibold text-gray-800 mb-4">
-                Find the best answer to your technical question, help others
-                answer theirs To get started click the START button
+                Begin your exploration by clicking the "Start" button below.
+                This button serves as your gateway to a world of knowledge and
+                collaboration.
               </h2>
 
               <div className="flex justify-end">
