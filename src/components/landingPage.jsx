@@ -32,8 +32,7 @@ export default function LandingPage() {
               </svg>
                   
               <h2 className="text-lg font-semibold text-gray-800 mb-4">
-                Find the best answer to your technical question, help others
-                answer theirs
+                To get started click the START button
               </h2>
 
               <div className="flex justify-end">
@@ -41,7 +40,7 @@ export default function LandingPage() {
                   Community
                 </button>
                 <button className="bg-orange-600 font-bold  text-white px-4 py-2 rounded-lg mr-2"  onClick={handlePage}>
-                  Start
+                  START
                 </button>
               </div>
             </div>
