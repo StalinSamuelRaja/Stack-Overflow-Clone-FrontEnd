@@ -9,7 +9,7 @@ export default {
   theme: {  
   },
   daisyui: {
-    themes: ["light", "bumblebee", "cupcake","cyberpunk","valentine","halloween","synthwave","dark","luxury","forest"],
+    themes: ["light"],
   },
 
   plugins: [require("daisyui")],
