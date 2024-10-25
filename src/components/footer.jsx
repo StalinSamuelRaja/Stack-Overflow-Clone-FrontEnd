@@ -1,4 +1,5 @@
 import React from "react";
+import LOGO from "../assets/logo.png"
 
 const handleLogoClick = () => {
   // Redirect to the main space
@@ -14,7 +15,7 @@ const Footergrid = () => {
           {/* Stack Overflow logo with click functionality */}
           <a href="/" onClick={handleLogoClick}>
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Stack_Overflow_icon.svg/768px-Stack_Overflow_icon.svg.png"
+              src={LOGO}
               alt="Stack Overflow Logo"
               className="ml-8 mt-1 w-10 h-10 cursor-pointer" // Adjusted margin, size, and cursor
             />

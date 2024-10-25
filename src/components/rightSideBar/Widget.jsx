@@ -3,10 +3,10 @@ import { ChatAltIcon } from "@heroicons/react/solid";
 export default function Widget() {
   return (
     <div className="max-w-sm mx-auto rounded-md overflow-hidden border border-gray-300 shadow-md">
-      <div className="bg-warning-subtle px-4 py-2 font-semibold">
+      <div className="bg-[#2A7FB2] text-[#ffffff]  px-4 py-2 font-semibold ">
         Featured on Meta
       </div>
-      <div className="px-4 py-3 bg-warning-subtle">
+      <div className="px-4 py-3 bg-[#AFE2F3]">
         {/* Adjusted height using h-auto and md:h-64 classes */}
 
         <div className="flex items-center gap-3 mb-2">

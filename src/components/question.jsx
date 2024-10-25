@@ -32,7 +32,7 @@ export default function Questions() {
           questioninfo.Quest &&
           questioninfo.Quest.map((question) => (
             <div key={question._id} className="mb-5">
-              <div className="card bg-warning-subtle text-neutral">
+              <div className="card bg-[#AFE2F3] text-neutral">
                 <div className="card-body">
                   <Link className="text font-bold" to={`/view/ques/${question._id}`}>
                     {question.title}

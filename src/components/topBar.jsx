@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import LOGO from '../assets/logo.jpg'
+import LOGO from '../assets/logo.png'
 import LeftSideBar from "../components/leftSideBar"; // Import LeftSideBar component
 
 export default function TopBar() {
