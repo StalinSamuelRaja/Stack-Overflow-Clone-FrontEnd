@@ -73,7 +73,7 @@ export default function LeftSideBar() {
             <div className="hidden sm:block card flex flex-col w-full sm:w-60 bg-base-100 shadow-xl">
               <div className="card-body max-w-sm">
                 <h2 className="card-title">
-                  Stack Overflow for Teams –
+                Tech Hub for Teams –
                   <div className="badge bg-orange-600 text-base-100">NEW</div>
                 </h2>
                 <p>Start collaborating and sharing organizational knowledge.</p>

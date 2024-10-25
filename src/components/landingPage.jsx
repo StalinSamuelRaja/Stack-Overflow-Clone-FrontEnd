@@ -16,7 +16,7 @@ export default function LandingPage() {
       <TopBar />
       <div className="mt-8 mb-0 mx-4 mb-44 md:mx-0 text-center md:text-left">
       <h1 className="text-4xl md:text-3xl font-bold text-white">
-      Begin your Journey   <span className="md:inline-block text-orange-600">Click START</span>  to ask Question in our Stack Overflow clone.</h1>
+      Begin your Journey   <span className="md:inline-block text-orange-600">Click START</span>  to ask Question in our Tech Hub.</h1>
       </div>
       <div className="flex flex-col md:flex-row md:justify-center md:items-center md:space-x-8 mt-8">
         <div className="m-8 md:mr-0 md:ml-12">
@@ -91,7 +91,7 @@ export default function LandingPage() {
           <span className="md:inline-block">
             <TextAnime />
           </span>{" "}
-          has a tab open to Stack Overflow
+          has a tab open to Tech Hub
         </h1>
         
       </div>

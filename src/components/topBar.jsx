@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import LOGO from '../assets/logo.jpg'
 import LeftSideBar from "../components/leftSideBar"; // Import LeftSideBar component
 
 export default function TopBar() {
@@ -69,7 +70,7 @@ export default function TopBar() {
             <img
               alt="Tailwind CSS Navbar component"
               className="hidden sm:inline w-16 h-8 mr-2"
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Stack_Overflow_icon.svg/768px-Stack_Overflow_icon.svg.png"
+              src={LOGO}
             />
           </Link>
 

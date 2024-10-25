@@ -128,9 +128,9 @@ const Signinuser = () => {
             </div>
           </div>
           <div className="card p-4 m-4 bg-green-100 mx-auto sm:w-2/5 rounded-md ">
-            <h4 className="text-lg font-semibold mb-2">Demo Login</h4>
+            <h4 className="text-lg font-semibold mb-2">Use This Below One for Demo Login</h4>
             <p>Email: stalin@gmail.com</p>
-            <p>Password: password</p>
+            <p>Password: Sam@1234</p>
           </div>
         </div>
       </div>

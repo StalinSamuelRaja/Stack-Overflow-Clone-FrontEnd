@@ -19,11 +19,11 @@ const Footergrid = () => {
               className="ml-8 mt-1 w-10 h-10 cursor-pointer" // Adjusted margin, size, and cursor
             />
           </a>
-          <span className="text-lg font-bold">STACK OVERFLOW CLONE</span>
+          <span className="text-lg font-bold">Tech Hub</span>
         </div>
         <nav className="footer__nav md:col-span-3 ml-0 grid grid-cols-2 md:grid-cols-4 gap-10">
           <ul className="footer__nav-list">
-            <li className="footer__nav-item">STACK OVERFLOW</li>
+            <li className="footer__nav-item">Tech Hub</li>
             <a href="/ques/all">
               <li className="footer__nav-item">Questions</li>
             </a>
@@ -71,7 +71,7 @@ const Footergrid = () => {
         </nav>
         <div className="footer__legal text-sm text-gray-400 ml-0 mt-4 md:col-span-full flex items-center  justify-center">
           {/* Legal information */}
-          <span>&copy; 2024 Stack Overflow Clone. All rights reserved.</span>
+          <span>&copy; 2024 Tech Hub. All rights reserved.</span>
           <span className="ml-4">
             <a href="#" className="text-gray-400 hover:text-white">
               Privacy Policy
